@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coca-Cola | Taste the feeling</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <!-- Favicon -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Style -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Path: index.html -->
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <!-- circle -->
+      <header>
+        <a href="#"><img src="images/logo.png" alt="logo-coca-cola" /></a>
+        <div class="toggle" onClick="toggleMenu()"></div>
+        <!-- toggle -->
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- navigation -->
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Taste the Feeling</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+            quibusdam, quis. Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Maiores pariatur corrupti, ab cupiditate unde et esse dolorem
+            eligendi inventore deleniti blanditiis voluptate vero obcaecati
+            tempore porro sapiente! Aliquid, harum illo.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <!-- textBox -->
+        <div class="imgBox">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/cocacola1.png" /></div>
+              <div class="swiper-slide"><img src="images/cocacola2.png" /></div>
+              <div class="swiper-slide"><img src="images/cocacola3.png" /></div>
+              <div class="swiper-slide"><img src="images/cocacola4.png" /></div>
+              <div class="swiper-slide"><img src="images/cocacola5.png" /></div>
+              <div class="swiper-slide"><img src="images/cocacola6.png" /></div>
+            </div>
+            <!-- swiper-wrapper -->
+          </div>
+          <!-- swiper-container -->
+        </div>
+        <!-- imgBox -->
+      </div>
+      <!-- content -->
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="images/facebook.png" alt="socials" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/twitter.png" alt="socials" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/instagram.png" alt="socials" /></a>
+        </li>
+      </ul>
+      <!-- social-icons -->
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Path: index.html -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop: true,
+      });
+
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
